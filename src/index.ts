@@ -6,7 +6,7 @@ import { CamelCased } from './types';
  *
  *  const mapUser = autoCamelCaseWithRules({
  *    id: 'userId',
- *  } as const);
+ *  });
  *
  *  const result = mapUser({
  *    id: 1,
@@ -18,7 +18,7 @@ import { CamelCased } from './types';
  */
 const autoCamelCaseWithCustomRules = <
     TMap extends Record<PropertyKey, PropertyKey>,
-    >(map: TMap) => <TData>(data: TData)
+    >(map: Readonly<TMap>) => <TData>(data: TData)
     : CamelCased<TMap, TData> => Object.entries(data).reduce((result, [key, value]) => {
       const newKey = typeof map[key] === 'string'
         ? map[key]

@@ -1,6 +1,6 @@
 {
   "name": "auto-camel-case-with-rules",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "This utils allows to change object props to camelcase with optional custom property names. The returned object has correct type.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -20,7 +20,7 @@
   "repository": "https://github.com/question44/auto-camel-case-with-rules.git",
   "license": "ISC",
   "files": [
-    "dist/**/*",
+    "lib/**/*",
     "types/**/*"
   ],
   "devDependencies": {
